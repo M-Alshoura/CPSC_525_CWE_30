@@ -6,7 +6,7 @@ all: $(EXES)
 $(EXES) : Makefile
 
 vulnerable_random: vulnerable_random.cpp Makefile
-	g++ -O2 -Wall -DSTORED_SECRET=\"super\ secret\ encrypted\ message\" $< -o $@
+	g++ -O2 -Wall $< -o $@
 
 exploit: exploit.cpp
 	g++ -O2 -Wall exploit.cpp -o exploit
@@ -14,3 +14,4 @@ exploit: exploit.cpp
 clean: Makefile
 	/bin/rm -f *~
 	/bin/rm -f $(EXES)
+	/bin/rm -f ./public_information.txt
