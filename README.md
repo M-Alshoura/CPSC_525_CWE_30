@@ -2,7 +2,7 @@
 
 ## Description of the vulnerable code  
 
-The code emulates a weaker [Diffie-Hellman](https://en.wikipedia.org/wiki/Diffie%E2%80%93Hellman_key_exchange) key exchange to encrypt a message provided as a command line argument. For the purposes of demonstration the shared private key is generated using the program's own public key to simplify the calculation. 
+The code emulates a weaker [Diffie-Hellman](https://en.wikipedia.org/wiki/Diffie%E2%80%93Hellman_key_exchange) key exchange to encrypt a message provided as a command line argument. For the purposes of demonstration the shared private key is generated using the program's own public key to simplify the logic. 
 
 The exchange contains public information that a malicious actor would be able to see namely:
 - The prime `prime_number_P` which is used for modulus
